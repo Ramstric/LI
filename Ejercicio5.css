@@ -1,0 +1,89 @@
+sub, sup{
+  margin: auto;
+  font-family: Arial, serif;
+  font-size: 75%;
+}
+blockquote{
+  margin-left: 240px;
+  margin-right: 240px;
+  padding: 10px 10px 10px 10px;
+  border: 3px outset lightsteelblue;
+  text-align: center;
+  font-family: "Trebuchet MS", serif;
+}
+
+pre{
+  margin: 50px 0 50px 0;
+  text-align: center;
+}
+
+/* Párrafos */
+p{
+  margin: 5px 50px 5px 50px;
+  font-family: Arial, serif;
+}
+
+p.img{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p.resaltado{
+  margin: 35px 0 35px 0;
+  text-align: center;
+}
+
+/* Títulos */
+h1{
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  background-color: lightblue
+}
+
+h2.rojo{
+  margin-top: 30px;
+  margin-left: 25px;
+  font-family: Georgia, serif;
+  color: darkred;
+}
+
+h2.morado{
+  margin-top: 30px;
+  margin-left: 25px;
+  font-family: Georgia, serif;
+  color: rebeccapurple;
+}
+
+h3{
+  margin-left: 50px;
+  font-family: Georgia, serif;
+  color: darkslateblue;
+}
+
+/* Resaltadores */
+strong.azul{
+  margin: auto;
+  padding: 5px 10px 5px 10px;
+  font-family: SansSerif, serif;
+  background-color: #b3d4fc;
+  text-align: center
+}
+
+strong.rojo{
+  margin: auto;
+  padding: 5px 10px 5px 10px;
+  font-family: SansSerif, serif;
+  background-color: indianred;
+  color: white;
+  text-align: center
+}
+
+strong.morado{
+  margin: auto;
+  padding: 5px 10px 5px 10px;
+  font-family: SansSerif, serif;
+  background-color: rebeccapurple;
+  color: white;
+  text-align: center
+}
