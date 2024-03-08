@@ -21,6 +21,7 @@ pre{
   max-width: 600px;
   text-align: center;
   outline: palevioletred dashed 1.5px;
+  outline-offset: 10px;
 }
 
 /* Párrafos */
@@ -47,6 +48,8 @@ h1{
   background-color: lightblue;
   max-width: 800px;
   outline: powderblue medium dashed;
+  outline-offset: -1px;
+
 }
 
 h2.rojo{
@@ -56,6 +59,7 @@ h2.rojo{
   color: darkred;
   width: 300px;
   outline: rgb(255,0,0,15%) 2px dashed;
+  outline-offset: 5px;
 }
 
 h2.morado{
@@ -65,6 +69,7 @@ h2.morado{
   color: rebeccapurple;
   width: 300px;
   outline: rgb(210,0,255,15%) 2px dashed;
+  outline-offset: 5px;
 }
 
 h3{
@@ -73,6 +78,7 @@ h3{
   color: darkslateblue;
   width: 350px;
   outline: rgb(0,0,255,15%) 2px dashed;
+  outline-offset: 2px;
 }
 
 /* Resaltadores */
