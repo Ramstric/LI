@@ -1,0 +1,41 @@
+/* Integrantes del equipo:
+ Hernández Hernández Ramón Everardo
+ López Victorino Oscar Abiud
+ Reyes Ramírez Giselle Alejandra  */
+
+ *{
+    padding: 0 ;
+    margin: 0;
+ }
+
+ .header {
+    background-color: red;
+    color: white;
+ } 
+
+ .item1{
+    color: yellow;
+ }
+
+ ul li:first-child, ol li:first-child{
+    font-size: 25px;
+ } 
+
+ ul{
+    background-color: #bbbbbb;
+ }
+
+ ol{
+    background-color: gray;
+    color: white;
+ }
+
+ ul, ol{
+    list-style: none;
+ }
+
+ body{
+    font-family: sans-serif;
+    padding: 40px 40px 0px;
+ }
+

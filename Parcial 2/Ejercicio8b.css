@@ -1,0 +1,135 @@
+/* Integrantes del equipo:
+ Hernández Hernández Ramón Everardo
+ López Victorino Oscar Abiud
+ Reyes Ramírez Giselle Alejandra */
+* {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #023047;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 170px;
+  background-color: #8ecae6;
+  border: 1px solid #444444;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #444444;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.activate {
+  background-color: #023047;
+  color: #fb8500;
+}
+
+li a:hover:not(.activate) {
+  background-color: #219ebc;
+  color: #ffb703;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+ul.azul {
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: #141e46;
+  background-color: rgba(0, 0, 255, 10%);
+
+  width: auto;
+  font-size: 100%;
+  list-style-image: linear-gradient(to left bottom, steelblue, rebeccapurple);
+  list-style-position: inside;
+}
+
+ul.rojo {
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: #361d32;
+  background-color: rgba(255, 0, 0, 10%);
+
+  width: 350px;
+  font-size: 100%;
+  list-style-image: linear-gradient(to left bottom, palevioletred, orangered);
+  list-style-position: outside;
+}
+
+ol.let {
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: darkgoldenrod;
+  background-color: rgba(200, 200, 0, 10%);
+
+  font-size: 90%;
+  list-style-type: lower-alpha;
+}
+
+ol.num {
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: darkmagenta;
+  background-color: rgba(200, 0, 200, 10%);
+
+  width: 400px;
+  font-size: 90%;
+  list-style-type: decimal;
+}
+
+/* Párrafos */
+p {
+  margin: 5px 50px 5px 50px;
+}
+
+/* Títulos */
+h1.general {
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  background-color: lightblue;
+  max-width: 800px;
+  outline: powderblue medium dashed;
+}
+
+h2.rojo {
+  margin-top: 30px;
+  margin-left: 25px;
+  font-family: Georgia, serif;
+  color: darkred;
+  width: 300px;
+  outline: rgb(255, 0, 0, 15%) 2px dashed;
+}
+
+h2.morado {
+  margin-top: 30px;
+  margin-left: 25px;
+  font-family: Georgia, serif;
+  color: rebeccapurple;
+  width: 300px;
+  outline: rgb(210, 0, 255, 15%) 2px dashed;
+}
+
+h3 {
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  background-color: lightblue;
+  max-width: 800px;
+  outline: powderblue medium dashed;
+  text-align: center;
+}
+
+

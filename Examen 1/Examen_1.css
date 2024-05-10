@@ -1,0 +1,138 @@
+/* Hernández Hernández Ramón Everardo */
+
+*{
+  font-family: sans-serif;
+  font-size: medium;
+  max-width: 150px;
+}
+
+body{
+  background-color:hsla(194, 63%, 89%, 0.1);
+}
+
+#link{
+  text-decoration:none;
+  text-transform: capitalize;
+  max-width: 150px;
+  width: 100px;
+  height: 20px;
+}
+
+h1{
+  color: rgb(42, 71, 102);
+  background-color: rgba(127, 175, 227,0.9);
+
+  border: 2px #000000 solid;
+  padding: 10px 20px 10px 20px;
+
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 1px;
+  margin-right: 1px;
+
+  font-size: 36px;
+  font-variant: small-caps;
+  font-weight: bold;
+  text-shadow: 2px 2px hsl(201, 100%, 14%);
+
+  outline-style: dotted;
+  outline-width: 4px;
+  outline-color: #003049;
+  outline-offset: 2px;
+
+  word-spacing: 40px;
+
+  width: 100px;
+  max-width: 150px;
+}
+
+h2{
+  font-size: 28px;
+  color: orangered;
+
+  outline-style: solid;
+  outline-width: thin;
+
+  border-style: solid;
+  border-width: 2px;
+
+  margin: 1px;
+  padding: 20px;
+  width: 100px;
+  max-width: 150px;
+}
+
+h3{
+  font-size: 22px;
+  color: #da143c;
+
+  border-style: inset;
+  border-width: 2px;
+  border-color: rgba(218, 20, 60, 0.5);
+
+  margin: 1px;
+  padding: 20px;
+  width: 100px;
+  max-width: 150px;
+}
+
+
+a{
+  color: #003049;
+  vertical-align: super;
+}
+
+div{
+ text-align: center;
+  outline-style: groove;
+}
+
+
+p{
+  text-indent: 20px;
+  text-align-last: center;
+  text-align: justify;
+
+  line-height: 20px;
+
+  padding-bottom: 0.25cm;
+  padding-top: 0.25px;
+  padding-left: 0.1pt;
+  padding-right: -0.1px;
+
+}
+
+blockquote{
+  font-style: italic;
+  font-size: 15px;
+
+  line-height: 26px;
+  letter-spacing: 1px;
+
+  border-style: none;
+  outline-style: none;
+}
+
+
+ul{
+ list-style-image: linear-gradient(to right bottom,#F77F00,orangered );
+ list-style-position: outside;
+}
+
+ol{
+  list-style-type: lower-alpha;
+  list-style-position: inside;
+  font-size: small;
+}
+
+.cursiva_negritas{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+
+  unicode-bidi: bidi-override;
+  vertical-align: sub;
+  outline-style: dotted;
+  outline-width: thin;
+}

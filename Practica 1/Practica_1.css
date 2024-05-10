@@ -4,9 +4,141 @@ Hernández Hernández Ramón Everardo
 López Victorino Oscar Abiud
 Reyes Ramírez Giselle Alejandra
 */
-
 *{
-    font-family: Verdana;
+ font-family: sans-serif;
+ max-width: 100%;
+}
+h1{
+border: 2px #000000 solid;
+padding: 10px 30px 10px 30px;
+margin: 20px 400px 30px 400px;
+background-color: rgba(252, 191, 73,0.9);
+color: rgb(214, 40, 40);
+font-variant: small-caps;
+font-weight: bold;
+text-shadow: 2px 2px hsl(201, 100%, 14%) ;
+outline: 4px dotted #003049;
+outline-offset: 2px;
+word-spacing: 40px;
+}
+#enlace{
+ text-decoration:none ;
+ text-transform: capitalize;
+  outline-style: hidden;
+}
+a{
+ color: #003049;
+  border-style: solid;
+  outline-style: solid;
+  vertical-align: super;
+}
+div,h1{
+ text-align: center;
+  outline-style: groove;
+}
+body{
+ background-color:hsla(51, 55%, 82%, 0.5);
+}
+h2{
+ color: #F77F00;
+  margin-right: auto;
+  margin-top: inherit;
+  margin-left: 0.1cm;
+  margin-bottom: -0.5pt;
+  outline-style: solid;
+  border-style: solid;
+  border-width: 0.1px;
+  outline-width: 0.1px;
+}
+img{
+ border-width: 2pt;
+ border-style: dashed;
+ border-color: inherit;
+ outline: 4px outset #003049;
+ outline-offset: 1px;
+ width: 400px;
+ height: 200px;
+  margin-top: 1%;
+  padding-top: 1%;
+  padding-right: inherit;
+  text-align: left;
+
+
+}
+img.ali_vertical{
+ vertical-align: middle;
+  border-style: double;
+  text-align: right;
+  outline-style: double;
+}
+p{
+ text-indent: 20px;
+  border-style: groove;
+ text-align-last: center;
+  padding-bottom: 0.25cm;
+  padding-top: 0.25px;
+  padding-left: 0.1pt;
+  padding-right: -0.1px;
+  text-align: justify;
+  outline-style: dashed;
+}
+li,p,pre,blockquote{
+ font-size: large;
+ line-height: 26px;
+ letter-spacing: 1px;
+  border-style: none;
+  outline-style: none;
+
+}
+h3{
+ color: hsl(201, 100%, 14.3%);
+  border-style: ridge;
+  outline-style: ridge;
+}
+ul{
+ list-style-image: linear-gradient(to right bottom,#F77F00,orangered );
+ list-style-position: outside;
+  border-style: dashed;
+}
+ol{
+ list-style-type: upper-latin;
+ list-style-position: inside;
+  border-style: hidden;
+  outline-style: hidden;
+}
+.cursiva_negritas{
+ font-style: italic;
+ font-weight: bold;
+ unicode-bidi: bidi-override;
+  vertical-align: sub;
+  outline-style: dotted;
+  border-style: dotted;
 }
 
+h4{
+  max-width: 100pt;
+  border-style: inset;
+  outline-style: inset;
+  outline-width: inherit;
+  outline-color: floralwhite;
+  vertical-align: baseline;
+  text-align-last: right;
+}
 
+h5{
+  max-width: 100%;
+  border-style: wave;
+  outline-style: wave;
+  outline-width: thin;
+  outline-color: floralwhite;
+  vertical-align: text-top;
+  text-align-last: left;
+}
+
+h6{
+  max-width: 10cm;
+  border-style: dot-dash;
+  outline-style: dot-dash;
+  vertical-align: text-bottom;
+  text-align-last: justify;
+}

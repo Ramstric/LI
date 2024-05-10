@@ -1,0 +1,18 @@
+/* 
+Integrantes del equipo
+ Hernández Hernández Ramón Everardo
+ López Victorino Oscar Abiud
+ Reyes Ramírez Giselle Alejandra
+  */
+
+*{
+    font-family: sans-serif;
+    padding: 30px 20px 20px;
+}  
+img{
+    opacity: 0.5;
+}
+
+img:hover{
+    opacity: 1.0;
+}

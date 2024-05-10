@@ -1,0 +1,187 @@
+/*
+Integrantes del equipo
+Hernández Hernández Ramón Everardo
+López Victorino Oscar Abiud
+Reyes Ramírez Giselle Alejandra
+*/
+
+:root{
+  --azul_oscuro: #22577A;
+  --azule_claro: #38a3a5;
+  --verde_oscuro: #57cc99;
+  --verde: #80ED99;
+  --verde_claro: #C7F9CC;
+}
+
+*{
+  font-family: Arial, sans-serif;
+}
+
+ul.nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #38A3A5;
+  border: 1px solid;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+ul.nav li{
+  text-align: center;
+  border-bottom: 1px solid;
+  float: left;
+}
+
+ul.nav li a{
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a.active{
+  background-color: #57CC99;
+  color: white;
+}
+
+ul.nav li a:hover:not(.active){
+  background-color: #22577a;
+  color: white;
+}
+
+
+.header{
+  background-color: #16A085;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.nav-link{
+  color: white;
+  text-decoration: none;
+}
+
+.logo{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu{
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav-menu-item{
+  font-size: larger;
+  margin: 0 10px;
+  align-self: center;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link{
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover{
+  background-color: #13594b;
+  transition: 0.25s;
+}
+
+ul.azul{
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: #141e46;
+  background-color: rgba(0, 0, 255, 10%);
+
+  width: auto;
+  font-size: 100%;
+  list-style-image: linear-gradient(to left bottom, steelblue, rebeccapurple);
+  list-style-position: inside;
+}
+
+ul.rojo{
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: rgba(43, 104, 75);
+  background-color: rgba(87, 204, 53, 10%);
+
+  width: 350px;
+  font-size: 100%;
+  list-style-image: linear-gradient(to left bottom, palevioletred, orangered);
+  list-style-position: outside;
+}
+
+ol.let{
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: rgba(43, 104, 75);
+  background-color: rgba(87, 204, 53, 10%);
+
+  font-size: 90%;
+  list-style-type: lower-alpha;
+}
+
+ol.num{
+  padding: 10px 0 10px 2px;
+  margin: 25px 50px 25px 50px;
+  color: #5360CE;
+  background-color: rgba(83, 96, 206, 10%);
+
+  width: 400px;
+  font-size: 90%;
+  list-style-type: decimal;
+}
+
+/* Párrafos */
+p{
+  margin: 5px 50px 5px 50px;
+}
+
+/* Títulos */
+h1{
+  padding-top: 25px;
+  font-family: Georgia, serif;
+
+  max-width: 800px;
+  outline: powderblue medium dashed;
+}
+
+h2.rojo{
+  margin-top: 30px;
+  margin-left: 25px;
+  font-family: Georgia, serif;
+  color: var(--verde_oscuro);
+  width: 300px;
+  outline: var(--verde_oscuro)2px dashed;
+}
+
+h2.morado{
+  margin-top: 30px;
+  margin-left: 25px;
+  font-family: Georgia, serif;
+  color: #5360CE;
+  width: 300px;
+  outline: #5360CE 2px dashed;
+}
