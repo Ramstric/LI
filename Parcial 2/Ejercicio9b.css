@@ -1,0 +1,159 @@
+/*
+Integrantes del equipo
+Hernández Hernández Ramón Everardo
+López Victorino Oscar Abiud
+Reyes Ramírez Giselle Alejandra
+*/
+
+:root{
+  --azul_oscuro: #22577A;
+  --azule_claro: #38a3a5;
+  --verde_oscuro: #57cc99;
+  --verde: #80ED99;
+  --verde_claro: #C7F9CC;
+}
+
+*{
+  font-family: sans-serif;
+}
+
+@media (max-device-width: 768px){
+  body{background-color: red}
+}
+
+ul.nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #38A3A5;
+  border: 1px solid;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+ul.nav li{
+  text-align: center;
+  border-bottom: 1px solid;
+  float: left;
+}
+
+ul.nav li a{
+  color: white;
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a.active{
+  background-color: #57CC99;
+  color: white;
+}
+
+ul.nav li a:hover:not(.active){
+  background-color: #22577a;
+  color: white;
+}
+
+
+.header{
+  background-color: #16A085;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.nav-link{
+  color: white;
+  text-decoration: none;
+}
+
+.logo{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu{
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav-menu-item{
+  font-size: larger;
+  margin: 0 10px;
+  align-self: center;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link{
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover{
+  background-color: #13594b;
+  transition: 0.25s;
+}
+
+.nav-toggle{
+  color: white;
+  background: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 0;
+  border: none;
+  cursor: pointer;
+  /*display: none;*/
+}
+
+input[type=text]{
+  width: 10cm;
+  padding: 4px 20px;
+  margin: 8px 0;
+  border: 1px solid #38a3a5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+input[type=password]{
+  background-image: url('icons8-key-30.png');
+  background-repeat: no-repeat;
+  background-size: 19px;
+  width: 10cm;
+  background-position: 2px 50%;
+  padding: 4px 20px;
+  margin: 8px 0;
+  border: 1px solid #38a3a5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+input[type=submit]{
+  margin-top:10px;
+  margin-left: 105px;
+  width: 100px;
+  color: white;
+  background-color: var(--azule_claro);
+  border-radius: 5px;
+  border-width: 1.5px;
+}

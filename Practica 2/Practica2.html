@@ -1,0 +1,196 @@
+<!--
+Integrantes del equipo
+ Hernández Hernández Ramón Everardo
+ López Victorino Oscar Abiud
+ Reyes Ramírez Giselle Alejandra
+-->
+
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <style>
+      body{
+        font-family: sans-serif;
+        font-size: 12px;
+        padding: 10px 5px 0;
+      }
+      h1{
+        text-align: center;
+      }
+      .claseCampo{
+        background-color: #bcd9a0;
+        padding-top: 15px;
+        padding-bottom: 5px;
+      }
+      #botonDeEnvio{
+        font-size: 15px;
+      }
+      .claseFormatoTabla table{
+        margin: 10px auto;
+      }
+      th, td{
+        padding: 10px;
+        border: solid green 1px;
+        text-align: center;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <form id="AccionForm">
+      <h1>RFC</h1>
+      <div class="claseCampo">
+        <label for="AccionNombre">Nombre(s)</label>
+        <input id="AccionNombre" name="AccionNombre" />
+      </div>
+      <div class="claseCampo">
+        <label for="AccionApellidoP">Apellido paterno</label>
+        <input id="AccionApellidoP" name="AccionApellidoP" />
+      </div>
+      <div class="claseCampo">
+        <label for="AccionApellidoM">Apellido materno</label>
+        <input id="AccionApellidoM" name="AccionApellidoM" />
+      </div>
+
+      <div class="claseCampo">
+        <label for="AccionAnioNac">Año de nacimiento</label>
+        <input
+          id="AccionAnioNac"
+          type="date"
+          name="AccionAnioNac"
+          value="1950-01-01"
+          max="2024-12-31"
+        />
+      </div>
+      <div class="claseCampo">
+        <button id="botonDeEnvio">Obtener</button>
+      </div>
+    </form>
+
+    <div class="claseFormatoTabla">
+      <table id="TablaDatos">
+        <tr>
+          <th> Nombre(s) </th>
+          <th> Apellido paterno </th>
+          <th> Apellido materno </th>
+          <th> RFC </th>
+        </tr>
+
+        <tr>
+          <td> Uno </td>
+          <td> Dos </td>
+          <td> Tres </td>
+          <td> Cuatro </td>
+        </tr>
+      </table>
+    </div>
+
+  <script>
+    const form = document.getElementById("AccionForm");
+    const contracciones = ["DA", "DAS", "DE", "DEL", "DER", "DI", "DIE", "DD", "EL", "LA", "LOS", "LAS", "LE", "LES", "MAC", "MC", "VAN", "VON", "Y"];
+    const antisonante = ["PEDO"];
+    const simbolos = /[^A-Za-z0-9]/;
+    const vocales = /[AEIOUX]/;
+
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let transaccionDeDato = new FormData(form);
+      insertaUnaFilaEnTablaDatos(transaccionDeDato);
+    });
+
+    function insertaUnaFilaEnTablaDatos(transaccionDeDato) {
+      let transaccionDeTablaRef = document.getElementById("TablaDatos");
+      let nuevaUltimaFila = transaccionDeTablaRef.insertRow(-1);
+
+
+      let nuevaCeldaRef = nuevaUltimaFila.insertCell(0);
+
+      let nombre = transaccionDeDato.get("AccionNombre");
+      nuevaCeldaRef.textContent = nombre
+
+      nuevaCeldaRef = nuevaUltimaFila.insertCell(1);
+      let ApellidoP = transaccionDeDato.get("AccionApellidoP");
+      nuevaCeldaRef.textContent = ApellidoP;
+
+      nuevaCeldaRef = nuevaUltimaFila.insertCell(2);
+      let ApellidoM = transaccionDeDato.get("AccionApellidoM");
+      nuevaCeldaRef.textContent = ApellidoM;
+
+      nombre = nombre.toUpperCase();
+      nombre = nombre.trim();
+      ApellidoP = ApellidoP.toUpperCase();
+      ApellidoP = ApellidoP.trim();
+      ApellidoM = ApellidoM.toUpperCase();
+      ApellidoM = ApellidoM.trim();
+
+      /*Excepción 1 (Ñ)*/
+      if (ApellidoP.startsWith("Ñ")) {
+        ApellidoP = "X" + ApellidoP.substring(1);
+      }
+
+      if (ApellidoM.startsWith("Ñ")) {
+        ApellidoM = "X" + ApellidoM.substring(1);
+      }
+
+      /*Excepción 8 (Sin segundo apellido)*/
+      if (ApellidoM === "") {
+        ApellidoM = "X";
+      }
+
+      /*Excepción 1 (Maria / Jose)*/
+      let nombres = nombre.split(" ");
+      nombres[0] = nombres[0].normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+      if(nombres.length === 2){
+        if(nombres[0] === "MARIA" || nombres[0] === "JOSE"){
+          nombre = nombres[1];
+        }
+      }
+
+      /*Excepción 5 (Contracciones)*/
+      contracciones.forEach(function callback(currentValue, index, array) {
+        nombre = nombre.replace(currentValue+' ', '');
+        ApellidoP = ApellidoP.replace(currentValue+' ', '');
+        ApellidoM = ApellidoM.replace(currentValue+' ', '');
+      });
+
+
+      let RFC = ApellidoP.substring(0, 2) + ApellidoM.substring(0, 1) + nombre.substring(0, 1);
+      RFC = RFC.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+      /*Excepción 3 (Símbolo en apellidos) */
+      for (let id in RFC){
+        if (simbolos.test(RFC[id])) {
+          RFC = RFC.substring(0, parseInt(id)) + 'X' + RFC.substring(parseInt(id) + 1);
+        }
+      }
+
+      /*Excepción 7 (Vocal interna)*/
+      let idApellido = 0;
+      while (!vocales.test(RFC[1])) {
+        RFC = RFC.substring(0, 1) + ApellidoP.substring(idApellido, idApellido + 1) + RFC.substring(2);
+        idApellido++;
+      }
+
+      /*Excepción 6 (Antisonante)*/
+      antisonante.forEach(function callback(currentValue, index, array) {
+        if (currentValue === RFC) {
+          RFC = RFC.substring(0, 1) + 'X' + RFC.substring(2);
+        }
+      });
+
+      let fecha = transaccionDeDato.get("AccionAnioNac");
+      RFC = RFC + fecha.substring(2, 4) + fecha.substring(5, 7) + fecha.substring(8, 10);
+      nuevaCeldaRef = nuevaUltimaFila.insertCell(3);
+      nuevaCeldaRef.textContent = RFC
+    }
+  </script>
+  </body>
+
+</html>
